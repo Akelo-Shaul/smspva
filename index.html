@@ -44,11 +44,36 @@
                 </div>
                 <div class="services-container">
                     <div class="services">
-                        <div class="grid-item">Telegram</div>
-                        <div class="grid-item">WhatsAPP</div>
-                        <div class="grid-item">Google</div>
-                        <div class="grid-item">Facebook</div>
-                        <div class="grid-item">OTHER(no...</div>
+                        <div class="grid-item">
+                            <div class="service-image">
+                                <img src="https://smspva.com/templates/New_Design/images/ico/telegram.png" width="20px" height="20px">
+                            </div>
+                            <h5 class="grid-title">Telegram</h5>
+                        </div>
+                        <div class="grid-item">
+                            <div class="service-image">
+                                <img src="https://smspva.com/templates/New_Design/images/ico/telegram.png" width="20px" height="20px">
+                            </div>
+                            <h5 class="grid-title">WhatsAPP</h5>
+                        </div>
+                        <div class="grid-item">
+                            <div class="service-image">
+                                <img src="https://smspva.com/templates/New_Design/images/ico/telegram.png" width="20px" height="20px">
+                            </div>
+                            <h5 class="grid-title">Google</h5>
+                        </div>
+                        <div class="grid-item">
+                            <div class="service-image">
+                                <img src="https://smspva.com/templates/New_Design/images/ico/telegram.png" width="20px" height="20px">
+                            </div>
+                            <h5 class="grid-title">Facebook</h5>
+                        </div>
+                        <div class="grid-item">
+                            <div class="service-image">
+                                <img src="https://smspva.com/templates/New_Design/images/ico/telegram.png" width="20px" height="20px">
+                            </div>
+                            <h5 class="grid-title">OTHER(no guarantee)</h5>
+                        </div>
                         <div class="grid-item">POF.com</div>
                         <div class="grid-item">MS, Bing,...</div>
                         <div class="grid-item">Tinder</div>
@@ -72,14 +97,14 @@
                             <h5 class="service-selected">Click here to view all services</h5>
                         </div>
                     </div>
-                    <div id="select_platforms">
-                        <form>
+                    <div class="select-platforms">
+                        <form class="dropdown-items">
                             <input type="text" placeholder="Search" name="search" id="search_id">
                         </form>
                        <!-- we need all the platforms  -->
                         <div class="dropdown-items">
                             <div class="dropdown-service">
-                                <img src="" alt="">
+                                <img src="https://smspva.com/templates/New_Design/images/ico/open_api.png" width="18px" height="18px">
                                 <h5>1 OpenAI API  (chatGPT, DALL-e 2)</h5>
                             </div>
                         </div>
@@ -91,28 +116,42 @@
             </div>
     
             <div class="country">
-                <h4>Select country</h4>
-                <div class="country-search">
-                    <input type="text" class="search-input" placeholder="Search">
-                    <button type="button"><i class="fa fa-exchange" aria-hidden="true"></i></button>
+                <div class="country-select-title">
+                    <h4>Select country</h4>
                 </div>
-                <div class="countries">
-                    <select id="countries-list" size="8">
-                        <option value="Russia">Russian Federation</option>
-                        <option value="2">Canada</option>
-                        <option value="3">United States</option>
-                        <option value="4">Unt.Kingdom</option>
-                        <option value="5">France</option>
-                        <option value="6">Germany</option>
-                        <option value="7">Italy</option>
-                        <option value="8">Spain</option>
-                        <option value="9">Albania</option>
-                        <option value="10">Bangladesh</option>
-                        <option value="11">Bos. and Herz</option>
-                        <option value="12">Brazil</option>
-                        <option value="12">Bulgaria</option>
-                        <option value="12">Colombia</option>
-                    </select>
+                <div class="countries-container">  
+                    <div class="country-search">
+                        <form>
+                            <input type="text" class="search-input" placeholder="Search">
+                        </form>
+                        <div class="sort-dropdown">
+                            <button type="button"><i class="fa fa-exchange" aria-hidden="true"></i></button>
+                            <div class="sort-dropdown-content">
+                                <ul>
+                                    <li>Default<i class="fa fa-check"></i></li>
+                                    <li>Price: Low to High</li>
+                                    <li>Price: High to Low</li>
+                                    <li>Quantity</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="countries">
+                        <div class="contry-item">
+                            <div class="alignment-div">
+                                <div class="country-img">
+                                    <img src="https://smspva.com/templates/New_Design/images/country_svg/KH.svg" width="20px" height="20px">
+                                </div>
+                                <h5 class="country-title">Cambodia</h5>
+                            </div>
+                            <div class="alignment-div">
+                                <span class="item-price">from <b>$0.50</b></span>
+                                <div class="country-button">
+                                    <div>Select</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -180,13 +219,32 @@
 
             <!-- content displayed when service is selected -->
             <div class="select-service-content">
-                <h2>Temporary number for <span class="service-selected"></span></h2>
-                <p>Get a temporary number for <span class="service-selected"></span> and keep your privacy safe. Our service provides the ability to receive online SMS messages to verify and activate your account. We suggest using real SIM cards and not virtual VOIP numbers, which guarantees a reliable and stable connection.</p>
-                <button type="button" class="triad">Try it out <i class="fa fa-arrow-right"></i></button>
+                <h2>Temporary number <span class="service-selected"></span> <span class="selected-country"></span></h2>
+                <p class="info-temp">Get a temporary number<span class="service-selected"></span> and keep your privacy safe. Our service provides the ability to receive online SMS messages to verify and activate your account. We suggest using real SIM cards and not virtual VOIP numbers, which guarantees a reliable and stable connection.</p>
+
+                <p class="info-temp-1">Need a temporary number <span class="service-selected"></span> <span class="selected-country"></span>? Let us take care of it! With our service you get a number <span class="selected-country"></span> that you can use to receive SMS messages. It can be for registering on a website, in mobile applications or just to keep your phone number private.</p>
+
+                <div class="temp-triad">
+                    <button type="button" class="triad">Try it out <i class="fa fa-arrow-right"></i></button>
+                </div>
             </div>
+
+            <!-- when only country is selected or both -->
+            <div class="about-country">
+                <img src="" alt="">
+                <div class="about-country-info">
+                    <h5>About Canada</h5>
+                    <p>Canada is the world's leading center for the development of digital products, where payment services, social networks, online marketplaces and other innovative platforms are concentrated. An important component of the security of your account and protection against spam is linking to a phone number. There is a need to purchase a virtual phone number in Canada to receive SMS messages.</p>
+                    <p>You are not required to use a real phone for this task. Instead, you can use the virtual number service, which does not require a physical SIM card and allows you to receive SMS messages over the Internet.</p>
+                    <p>The SmsPva website offers the opportunity to purchase a virtual mobile phone number in Canada at an affordable price. The cost depends on the service you choose, for which registration is required. Making a purchase takes only a few moments.</p>
+                </div>
+            </div>
+
+            <!-- when only service is selected or both -->
             <div class="how-select-service">
                 <img src="" alt="">
                 <div class="how-select-service-info">
+                    <h5>How to register <span class="service-selected"></span> via SMS?</h5>
                     <p>Our website provides excellent phone numbers for registering on <span class="select-service"></span>.</p>
                     <ul>
                         <li> To get a number for <span class="select-service"></span>, you must register on Smspva.com.</li>
@@ -198,6 +256,195 @@
                 </div>
             </div>
 
+            <!-- top selling in selected country -->
+            <div class="top-selling-services">
+
+                <h3>Top-selling services <span class="selected-country"></span></h3>
+                <p>Temporary numbers in Poland for websites, applications, and Internet services. Find a temporary number to receive SMS from popular services or select others.</p>
+                <div class="services-tabs">
+                    <div class="service-tab-container">
+                        <div class="service-tab">
+                            <div class="service-tab-image">
+                                <img src="https://smspva.com/templates/New_Design/images/ico/linkedin.png" width="42px" height="42px">
+                            </div>
+                            <div class="text-block">
+                                <h5>Linkedin</h5>
+                                <div class="price">
+                                    <div class="price-info">
+                                        <p>Available</p>
+                                        <p>Price</p>
+                                    </div>
+                                    <div class="price-amount">
+                                        <p><b>0</b></p>
+                                        <p><b>$0.15</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-tab-container">
+                        <div class="service-tab">
+                            <div class="service-tab-image">
+                                <img src="https://smspva.com/templates/New_Design/images/ico/linkedin.png" width="42px" height="42px">
+                            </div>
+                            <div class="text-block">
+                                <h5>Linkedin</h5>
+                                <div class="price">
+                                    <div class="price-info">
+                                        <p>Available</p>
+                                        <p>Price</p>
+                                    </div>
+                                    <div class="price-amount">
+                                        <p><b>0</b></p>
+                                        <p><b>$0.15</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-tab-container">
+                        <div class="service-tab">
+                            <div class="service-tab-image">
+                                <img src="https://smspva.com/templates/New_Design/images/ico/linkedin.png" width="42px" height="42px">
+                            </div>
+                            <div class="text-block">
+                                <h5>Linkedin</h5>
+                                <div class="price">
+                                    <div class="price-info">
+                                        <p>Available</p>
+                                        <p>Price</p>
+                                    </div>
+                                    <div class="price-amount">
+                                        <p><b>0</b></p>
+                                        <p><b>$0.15</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-tab-container">
+                        <div class="service-tab">
+                            <div class="service-tab-image">
+                                <img src="https://smspva.com/templates/New_Design/images/ico/linkedin.png" width="42px" height="42px">
+                            </div>
+                            <div class="text-block">
+                                <h5>Linkedin</h5>
+                                <div class="price">
+                                    <div class="price-info">
+                                        <p>Available</p>
+                                        <p>Price</p>
+                                    </div>
+                                    <div class="price-amount">
+                                        <p><b>0</b></p>
+                                        <p><b>$0.15</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-tab-container">
+                        <div class="service-tab">
+                            <div class="service-tab-image">
+                                <img src="https://smspva.com/templates/New_Design/images/ico/linkedin.png" width="42px" height="42px">
+                            </div>
+                            <div class="text-block">
+                                <h5>Linkedin</h5>
+                                <div class="price">
+                                    <div class="price-info">
+                                        <p>Available</p>
+                                        <p>Price</p>
+                                    </div>
+                                    <div class="price-amount">
+                                        <p><b>0</b></p>
+                                        <p><b>$0.15</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-tab-container">
+                        <div class="service-tab">
+                            <div class="service-tab-image">
+                                <img src="https://smspva.com/templates/New_Design/images/ico/linkedin.png" width="42px" height="42px">
+                            </div>
+                            <div class="text-block">
+                                <h5>Linkedin</h5>
+                                <div class="price">
+                                    <div class="price-info">
+                                        <p>Available</p>
+                                        <p>Price</p>
+                                    </div>
+                                    <div class="price-amount">
+                                        <p><b>0</b></p>
+                                        <p><b>$0.15</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-tab-container">
+                        <div class="service-tab">
+                            <div class="service-tab-image">
+                                <img src="https://smspva.com/templates/New_Design/images/ico/linkedin.png" width="42px" height="42px">
+                            </div>
+                            <div class="text-block">
+                                <h5>Linkedin</h5>
+                                <div class="price">
+                                    <div class="price-info">
+                                        <p>Available</p>
+                                        <p>Price</p>
+                                    </div>
+                                    <div class="price-amount">
+                                        <p><b>0</b></p>
+                                        <p><b>$0.15</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-tab-container">
+                        <div class="service-tab">
+                            <div class="service-tab-image">
+                                <img src="https://smspva.com/templates/New_Design/images/ico/linkedin.png" width="42px" height="42px">
+                            </div>
+                            <div class="text-block">
+                                <h5>Linkedin</h5>
+                                <div class="price">
+                                    <div class="price-info">
+                                        <p>Available</p>
+                                        <p>Price</p>
+                                    </div>
+                                    <div class="price-amount">
+                                        <p><b>0</b></p>
+                                        <p><b>$0.15</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-tab-container">
+                        <div class="service-tab">
+                            <div class="service-tab-image">
+                                <img src="https://smspva.com/templates/New_Design/images/ico/linkedin.png" width="42px" height="42px">
+                            </div>
+                            <div class="text-block">
+                                <h5>Linkedin</h5>
+                                <div class="price">
+                                    <div class="price-info">
+                                        <p>Available</p>
+                                        <p>Price</p>
+                                    </div>
+                                    <div class="price-amount">
+                                        <p><b>0</b></p>
+                                        <p><b>$0.15</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
 
             <div class="tips">
                 <h3>Tips Smspva.com</h3>
