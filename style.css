@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.first-title{
+    text-align: center;
+    padding-top: 6px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+.logo{
+    padding: 0 30px;
+}
+.logo img{
+    height: 15px;
+    width: 50px;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    border-radius: 20px;
+    margin-right: 10px;
+    border: 1px solid black;
+    overflow: hidden;
+    padding: none;
+    margin: none;
+}
+.nav-links span{
+    color: red;
+}
+.nav-links ul li:hover{
+    background-color: blue;
+}
+.links ul{
+    display: flex;
+}
+.nav-links ul li{
+    list-style-type: none;
+    padding: 5px 10px;
+    font-weight: 500;
+}
+.sign{
+    flex-basis: flex-end;
+}
+.sign ul{
+    display: flex;
+}
+.index-body{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid purple; /* to be deleted*/
+}
+
+/* .dropdown-menus{
+    width: 100%;
+} */
+.selections{
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+}
+.selections h4{
+    background-color: blue;
+    width: 30%;
+}
+.services{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+#dropdown{
+    width: 100%;
+}
+.country{
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+}
+.country-search{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#countries-list{
+    width: 100%;
+}
+.search-input{
+    width: 100%;
+    margin-right: 10px;
+}
+.fa-exchange{
+    transform: rotate(90deg);
+}
+.content{
+    margin: 10px;
+}
+.content h2{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.content p{
+    font-size: 17px;
+    padding-bottom: 30px;
+}
+.triad{
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 15px;
+}
+.triad i{
+    padding-left: 7px;
+}
+.how-to-register{
+    padding: 10px;
+    border: 1px solid black;
+}
+.how-to-register ul{
+    padding: 0 20px;
+    list-style-type: number;
+}
+/* .fa-newspaper-o{
+    width: 100px;
+    height: 100px;
+} */
+
+
+/* search bar */
+
+
+/* return number page */
+.rent-numbers{
+    width: 100%;
+    margin: 10px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.menu ul{
+    display: flex;
+    list-style-type: none;
+    /* align-items: center;
+    justify-content: space-between; */
+}
+.menu ul li{
+    padding: 7px 15px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 2px;
+}
+
+.tabcontent{
+    display: none;
+}
+.active{
+    display: block;
+}
+
+.activation-details{
+    padding: 10px;
+    list-style-type: none;
+}
+
+/* faq page */
+.faq button{
+    display: inline;
+    width: 100%;
+    text-align: left;
+}
+
+/* api */
+.archive-table{
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid black;
+}
+.table-wrapper{
+    overflow-x: auto;
+}
+table{
+    border-collapse: collapse;
+    width: fit-content;
+}
+td, th{
+    padding: 10px;
+    border: 1px solid black;
+    min-width: 50px;
+}
+
+.page-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* private mail page */
+.dose-menu-2 ul{ 
+    display: flex;
+}
+.dose-menu-2 ul li{
+    list-style-type: none;
+    padding: 10px;
+}
+.the-services{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+}

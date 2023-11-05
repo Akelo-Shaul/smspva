@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://www.reshot.com/preview-assets/icons/7UZWV5ELKT/logo-design-7UZWV5ELKT.svg" alt="">
+        </div>
+        <div class="nav-links">
+            <div class="links">
+                <ul>
+                    <li>Activations</li>
+                    <li><a href="returnum.html">Rent numbers</a></li>
+                    <li>Private<span>mail</span></li>
+                    <li><span>HQ</span>proxy</li>
+                    <li>Accounts store</li>
+                    <li>Patnership</li>
+                    <li>News</li>
+                    <li>Help</li>
+                </ul>
+            </div>
+            <div class="sign">
+                <ul>
+                    <li>Sign Up</li>
+                    <li>Sign in</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Rent number page -->
+    <div class="rent-numbers">
+        <div class="menu">
+            <ul>
+                <li class="tablink">Rent Number</li>
+                <li class="tablink">F.A.Q</li>
+                <li class="tablink">API</li>
+                <li class="tablink">ARCHIVE</li>
+
+                <!-- <li class="tablink" onclick="openTab(event, 'rent-number')">Rent Number</li>
+                <li class="tablink" onclick="openTab(event, 'faq')">F.A.Q</li>
+                <li class="tablink" onclick="openTab(event, 'api')">API</li>
+                <li class="tablink" onclick="openTab(event, 'archive')">ARCHIVE</li> -->
+            </ul>
+        </div>
+
+        <!-- rent number page -->
+        <div class="rent-number  tabcontent active" id="rent-number">
+                <ul class="activation-details">
+                    <li>- always active numbers</li>
+                    <li>- activation of numbers on by order, from 10 minutes</li>
+                    <li>- both types of numbers, priority for always active numbers</li>
+                </ul>
+                <p>Select country</p>
+                <div class="country-search">
+                    <input type="search" id="search-country" placeholder="country">
+                    <button type="button"></button>
+                </div>
+                <p>Select rental period</p>
+                <div class="rental-period">
+                    <select name="long" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <select name="week/month" id="">
+                        <option value="weeks">weeks(s)</option>
+                        <option value="months">month(s)</option>
+                    </select>
+                </div>
+                <p>Total</p>
+                <div class="selected-service">
+                    <p>First, select service</p>
+                </div>
+                <button type="button">Rent number</button>
+        
+                <button type="button">Show only favourites services</button>
+        
+                <div class="service-name">
+                    <input type="text" id="service-name" placeholder="Enter service name">
+                    <div class="service-list"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- faq page -->
+        <div class="faq tabcontent" id="faq">
+            <button type="button">Why do not recieve SMS?</button>
+            <button type="button">Why button for prolongation disabled?</button>
+            <button type="button">Why button for prolongation disabled?</button>
+            <button type="button">What to do if I did not manage to renew the number manually??</button>
+            <button type="button">Why is the number not activated for a long time?</button>
+            <button type="button">Will there be a refund for unused days upon removal?</button>
+        </div>
+
+        <!-- api page -->
+        <div class="api tabcontent" id="api">
+            <button type="button">General</button>
+            <button type="button">list of available countries</button>
+            <button type="button">List of available services: count, price, etc.</button>
+            <button type="button">Rent number</button>
+            <button type="button">List of orders</button>
+        </div>
+
+        <!-- arvhive page -->
+        <div class="archive-table tabcontent" id="archive">
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 150px">Begin</th>
+                            <th style="width: 150px;">Closed</th>
+                            <th style="width: 250px;">Service</th>
+                            <th style="width: 350px;">Phone number</th>
+                            <th style="width: 400px;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="5">NO records found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="page-details">
+                <p>page 1</p>
+                <div class="page-buttons">
+                    <button type="button">prev</button>
+                    <button type="button">next</button>
+                </div>
+            </div>
+        </div>
+
+</body>
+<script src="returnnum.js"></script>
+</html>
