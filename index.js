@@ -1,17 +1,3 @@
-// $(document).ready(function(){
-//     $("#dropdown").select2({
-//         placeholder: "Click here to view all services",
-//         allowClear: true,
-//         data: [
-//             {id: "", text: ""},
-//             {id: "", text: "1 OpenAI API(chatGPT, DALL-e 2)"}
-//         ],
-//         escapeMarkup: function(m){
-//             return m;
-//         }
-//     })
-// })
-
 
 const platforms = [
     {
@@ -31,17 +17,17 @@ const platforms = [
     }
 ]
 
-
-const platform_container = document.getElementById("select_platforms")
-
-
-const btn = document.getElementById("search_btn")
-
-
-
-// search_bar.addEventListener("change", function(e){
-// console.log(e.target.value)
-// })
+const services = document.querySelectorAll(".grid-item")
+const select_service = document.querySelectorAll(".service-selected")
+const default_content = document.querySelector(".default-content")
+services.forEach((service) =>{
+    service.addEventListener("click", ()=>{
+        default_content.style.display = "none";
+        select_service.forEach(selected =>{
+           selected.innerText = service.textContent; 
+        })
+    })
+})
 
 document.addEventListener('DOMContentLoaded', function() {
     const search_bar = document.getElementById("search_id")
