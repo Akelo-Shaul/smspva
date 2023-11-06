@@ -28,12 +28,18 @@ const info_temp = document.querySelector(".info-temp")
 const info_temp_1 = document.querySelector(".info-temp-1")
 const temp_triad = document.querySelector(".temp-triad");
 const how_select_service = document.querySelector(".how-select-service")
+const about_country = document.querySelector(".about-country")
+const top_selling_services = document.querySelector(".top-selling-services")
+const select_service_content = document.querySelector(".select-service-content")
+const for_both_container = document.querySelector(".for-both-container")
 
 let is_selected = false;
 let is_selected_1 = false;
 
 services.forEach((service) =>{
     service.addEventListener("click", ()=>{
+        how_select_service.style.display = "flex"
+        select_service_content.style.display = "block"
         default_content.style.display = "none";
         select_service.forEach(selected =>{
            selected.innerText = "for " + service.textContent; 
@@ -42,8 +48,6 @@ services.forEach((service) =>{
             selected.innerText = service.textContent;
         })
         is_selected = true;
-        
-        how_select_service.style.display = "block"
     })
 })
 
@@ -53,6 +57,7 @@ country_btn.forEach(btn => {
         const country_title = country_item.querySelector(".country-title")
 
         default_content.style.display = "none";
+        select_service_content.style.display = "block"
         info_temp.style.display = "none";
         info_temp_1.style.display = "block"
 
@@ -64,11 +69,17 @@ country_btn.forEach(btn => {
 
         temp_triad.style.display = "none"
         how_select_service.style.display = "none"
+        about_country.style.display = "flex"
+        top_selling_services.style.display = "block"
 
         is_selected_1 = true;
 
         if(is_selected && is_selected_1){
-            how_select_service.style.display = "block"
+            how_select_service.style.display = "flex"
+            // for both items selected
+            // how_select_service.classList.add("active")
+            // about_country.classList.add("active")
+            // for_both_container.classList.add("active")
         }
 
     })
