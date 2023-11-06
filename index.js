@@ -19,6 +19,7 @@ const platforms = [
 
 const services = document.querySelectorAll(".grid-title")
 const select_service = document.querySelectorAll(".service-selected")
+const select_service_for = document.querySelectorAll(".service-selected-for")
 const default_content = document.querySelector(".default-content")
 const countries = document.querySelectorAll(".country-title")
 const select_country = document.querySelectorAll(".selected-country")
@@ -36,6 +37,9 @@ services.forEach((service) =>{
         default_content.style.display = "none";
         select_service.forEach(selected =>{
            selected.innerText = "for " + service.textContent; 
+        })
+        select_service_for.forEach(selected =>{
+            selected.innerText = service.textContent;
         })
         is_selected = true;
         
