@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rentnum.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
@@ -115,26 +116,166 @@
                     </div>
 
                 </div>
+
+                <div class="list-services">
+                    <div class="first-service">
+    
+                        <div class="popup">   
+                            Use this service if you can't find a suitable service in our list. However, if you need several numbers for one resource, we recommend that you contact our support team to add it.                    
+                        </div>
+                        <div class="actual-service first-actual">
+                            <div class="actual-service-image">
+                                <img src="https://smspva.com/templates/SMSv1EN/images/ico/another.png">
+                            </div>
+                            <div class="actual-service-details">
+                                <h4>OTHER</h4>
+                                <p>Avail.144 PCS.for 1.5 USD per day</p>
+                            </div>
+                            <img id="popup-btn" src="https://smspva.com/templates/SMSv1EN/images/news_img/question-icon.ico">
+                            <div class="service-list-star">
+        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actual-service">
+                        <div class="actual-service-image">
+                            <img src="https://smspva.com/templates/SMSv1EN/images/ico/another.png">
+                        </div>
+                        <div class="actual-service-details">
+                            <h4>OTHER</h4>
+                            <p>Avail.144 PCS.for 1.5 USD per day</p>
+                        </div>
+                        <div class="service-list-star">
+    
+                        </div>
+                    </div>
+                    <div class="actual-service">
+                        <div class="actual-service-image">
+                            <img src="https://smspva.com/templates/SMSv1EN/images/ico/another.png">
+                        </div>
+                        <div class="actual-service-details">
+                            <h4>OTHER</h4>
+                            <p>Avail. 144 PCS. for 1.5 USD per day</p>
+                        </div>
+                        <div class="service-list-star">
+    
+                        </div>
+                    </div>
+                </div>
         
             </div>
     
             <!-- faq page -->
             <div class="faq tabcontent" id="faq">
-                <button type="button">Why do not recieve SMS?</button>
-                <button type="button">Why button for prolongation disabled?</button>
-                <button type="button">Why button for prolongation disabled?</button>
-                <button type="button">What to do if I did not manage to renew the number manually??</button>
-                <button type="button">Why is the number not activated for a long time?</button>
-                <button type="button">Will there be a refund for unused days upon removal?</button>
+                <h3 class="cont-head">Why do not recieve SMS?</h3>
+                <div class="content-after">
+                    <p>First, check that you activated phone number before send SMS. We are recommend to use private proxy, clear cache and cookie of browser when you create accounts using numbers.</p>
+                </div>
+                <h3 class="cont-head">Why button for prolongation disabled?</h3>
+                <div class="content-after">
+                    <p>You can prolong number only if before expiring date left less 7 days</p>
+                </div>
+                <h3 class="cont-head">Why button for prolongation disabled?</h3>
+                <div class="content-after">
+                    <p>You can prolong number only if before expiring date left less 7 days</p>
+                </div>
+                <h3 class="cont-head">What is max period for rent number?</h3>
+                <div class="content-after">
+                    <p>Max guarantee period for the rent - 90 days.</p>
+                </div>
+                <h3 class="cont-head">What to do if I did not manage to renew the number manually??</h3>
+                <div class="content-after">
+                    <p>If the rental period has expired and you have not had time to renew the rental, you can restore the rental in the Archive section on the Rental page yourself. Please note that it is not always possible to restore the number, but only if it is technically possible.</p>
+                </div>
+                <h3 class="cont-head">Why is the number not activated for a long time?</h3>
+                <div class="content-after">
+                    <p>After the activation request, your number appears in a certain queue for activation, where there are numbers and other users, so activation of the number may take some time. On average, a phone number is activated in 10-15 minutes, but it can take longer. If the number is not activated for a very long period of time, then you can contact the support team and we will try to resolve the issue. <br>
+                    <b>PHONE NUMBER STAYS ACTIVE FOR 10-30 MINUTES, THEN IS DEACTIVATED</b></p>
+                </div>
+                <h3 class="cont-head">Will there be a refund for unused days upon removal?</h3>
+                <div class="content-after">
+                    <p>We do not refund if you used the number, i.e. received SMS and you had no problems with the number. Refunds are made only when there are unsolvable problems with the number. In most cases, the issue of return is decided individually.</p>
+                </div>
             </div>
     
             <!-- api page -->
             <div class="api tabcontent" id="api">
-                <button type="button">General</button>
-                <button type="button">list of available countries</button>
-                <button type="button">List of available services: count, price, etc.</button>
-                <button type="button">Rent number</button>
-                <button type="button">List of orders</button>
+                <h3>General</h3>
+                <div>
+                    <pre>Only GET requests are accepted.
+                        The server always responds in JSON format. If the request was successful, then the status field will be 1, otherwise 0. If status = 0, then the cause of the error will be indicated in the msg field.
+                        Before sending SMS to a number, it must be activated and wait until the state of the order has the corresponding value.
+
+                        Please note that most requests require the user apikey to be specified.</pre>
+                </div>
+                <h3>list of available countries</h3>
+                <div>
+                    <h4>Request</h4>
+                    <pre>https://smspva.com/api/rent.php?method=getcountries</pre>
+                    <h4>Response</h4>
+                    <pre>
+                        {
+                            "status": 1,
+                            "data": [
+                              {
+                                "name": "Россия", // country name
+                                "code": "RU"      // country code
+                              }
+                            ]
+                          }
+                    </pre>
+                </div>
+                <h3>List of available services: count, price, etc.</h3>
+                <div>
+                    <h4>Request</h4>
+                    <pre>https://smspva.com/api/rent.php?method=getcountries</pre>
+                    <h4>Response</h4>
+                    <pre>
+                        {
+                            "status": 1,
+                            "data": [
+                              {
+                                "name": "Россия", // country name
+                                "code": "RU"      // country code
+                              }
+                            ]
+                          }
+                    </pre>
+                </div>
+                <h3>Rent number</h3>
+                <div>
+                    <h4>Request</h4>
+                    <pre>https://smspva.com/api/rent.php?method=getcountries</pre>
+                    <h4>Response</h4>
+                    <pre>
+                        {
+                            "status": 1,
+                            "data": [
+                              {
+                                "name": "Россия", // country name
+                                "code": "RU"      // country code
+                              }
+                            ]
+                          }
+                    </pre>
+                </div>
+                <h3>List of orders</h3>
+                <div>
+                    <h4>Request</h4>
+                    <pre>https://smspva.com/api/rent.php?method=getcountries</pre>
+                    <h4>Response</h4>
+                    <pre>
+                        {
+                            "status": 1,
+                            "data": [
+                              {
+                                "name": "Россия", // country name
+                                "code": "RU"      // country code
+                              }
+                            ]
+                          }
+                    </pre>
+                </div>
             </div>
     
             <!-- arvhive page -->
@@ -158,7 +299,7 @@
                     </table>
                 </div>
                 <div class="page-details">
-                    <p>page 1</p>
+                    <small>page 1</small>
                     <div class="page-buttons">
                         <button type="button">prev</button>
                         <button type="button">next</button>
@@ -166,48 +307,8 @@
                 </div>
             </div>
 
-            <div class="list-services">
-                <!-- <div class="popup">   
-                    Use this service if you can't find a suitable service in our list. However, if you need several numbers for one resource, we recommend that you contact our support team to add it.                    
-                </div> -->
-                <div class="actual-service">
-                    <div class="actual-service-image">
-                        <img src="https://smspva.com/templates/SMSv1EN/images/ico/another.png">
-                    </div>
-                    <div class="actual-service-details">
-                        <h4>OTHER</h4>
-                        <p>Avail.144 PCS.for 1.5 USD per day</p>
-                    </div>
-                    <div class="service-list-star">
-
-                    </div>
-                </div>
-                <div class="actual-service">
-                    <div class="actual-service-image">
-                        <img src="https://smspva.com/templates/SMSv1EN/images/ico/another.png">
-                    </div>
-                    <div class="actual-service-details">
-                        <h4>OTHER</h4>
-                        <p>Avail.144 PCS.for 1.5 USD per day</p>
-                    </div>
-                    <div class="service-list-star">
-
-                    </div>
-                </div>
-                <div class="actual-service">
-                    <div class="actual-service-image">
-                        <img src="https://smspva.com/templates/SMSv1EN/images/ico/another.png">
-                    </div>
-                    <div class="actual-service-details">
-                        <h4>OTHER</h4>
-                        <p>Avail. 144 PCS. for 1.5 USD per day</p>
-                    </div>
-                    <div class="service-list-star">
-
-                    </div>
-                </div>
-            </div>
+            
     </div>
 </body>
-<script src="returnnum.js"></script>
+<script src="rentnum.js"></script>
 </html>

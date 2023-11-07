@@ -1,0 +1,28 @@
+/* private mail page */
+.body{
+    width: 100vw;
+    padding: 0 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.services-select{
+    width: 33.3333%;
+    margin-right: 30px;
+}
+.dose-menu-2 ul{ 
+    display: flex;
+}
+.dose-menu-2 ul li{
+    list-style-type: none;
+    padding: 10px;
+    padding: 7px 15px;
+    border-radius: 15px;
+    margin: 2px;
+    background: #313131;
+    border: 1px solid #167085;
+}
+.the-services{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+}
